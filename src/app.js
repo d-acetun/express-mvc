@@ -1,10 +1,10 @@
-import express, { json } from "express";
+import express from "express";
 import { corsMiddleware } from "./middlewares/cors.js";
 import router from "./routes/routes.js";
 
 const app = express();
 
-app.use(json());
+app.use(express.json());
 app.disable("x-powered-by");
 
 app.use(corsMiddleware());
